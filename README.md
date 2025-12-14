@@ -1,1 +1,1 @@
-# holbertonschool-sorting_algorithms
+Tasks for C - Sorting algorithms & Big O
