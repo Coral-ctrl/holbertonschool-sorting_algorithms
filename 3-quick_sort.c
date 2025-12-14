@@ -1,6 +1,13 @@
 #include "sort.h"
 
-/* Helper function to swap two intergers */
+/**
+ * swap - Swaps two integers and prints the array
+ *
+ * @a: Pointer to the first integer
+ * @b: Pointer to the second integer
+ * @array: The array being sorted (for printing)
+ * @size: Number of elements in the array
+ */
 void swap(int *a, int *b, int *array, size_t size)
 {
 	int temp;
@@ -13,7 +20,17 @@ void swap(int *a, int *b, int *array, size_t size)
 		print_array(array, size);
 	}
 }
-/* Lomuto partition */
+
+/**
+ * lomuto_partition - Partitions a subarray using Lomuto scheme
+ *
+ * @array: The array being sorted
+ * @low: Starting index of the subarray
+ * @high: Ending index of the subarray (pivot is array[high])
+ * @size: Number of elements in the array
+ *
+ * Return: The final index of the pivot element
+ */
 size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
 {
 	int pivot = array[high];
@@ -31,7 +48,15 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
 	swap(&array[i], &array[high], array, size);
 	return i;
 }
-/* Recursive Quick Sort */
+
+/**
+ * quick_sort_recursive - Recursively sorts subarrays using Quick sort
+ *
+ * @array: The array being sorted
+ * @low: Starting index of the subarray
+ * @high: Ending index of the subarray
+ * @size: Number of elements in the array
+ */
 void quick_sort_recursive(int *array, size_t low, size_t high, size_t size)
 {
 	if (low < high)
