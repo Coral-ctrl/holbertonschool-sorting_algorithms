@@ -46,7 +46,7 @@ size_t lomuto_partition(int *array, size_t low, size_t high, size_t size)
 		}
 	}
 	swap(&array[i], &array[high], array, size);
-	return i;
+	return (i);
 }
 
 /**
@@ -66,7 +66,7 @@ void quick_sort_recursive(int *array, size_t low, size_t high, size_t size)
 		if (p > 0)
 			quick_sort_recursive(array, low, p - 1, size);
 		quick_sort_recursive(array, p + 1, high, size);
-    }
+	}
 }
 /**
  * quick_sort - Quick sort an array using Lomuto scheme
